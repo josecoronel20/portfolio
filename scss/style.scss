@@ -169,6 +169,7 @@ ul {
 #proyectos {
     background-color: $oscuro1;
     @include d-flex-column(column, center, center);
+    padding: 2rem 0;
 
     h2 {
         color: $claro1;
@@ -216,3 +217,21 @@ ul {
 .sitio:hover .imgHover{
     transform: scale(110%);
 }
+
+/*footer-------------------------------------------------------------*/
+#contacto{
+    @include d-flex-column(row, center, center);
+    background-color: $oscuros2;
+    padding: 2rem;
+    gap: 1rem;
+
+    a{
+        transition: 0.5s;
+    }
+
+    a:hover{
+        transform: scale(110%);
+    }
+}
+
+

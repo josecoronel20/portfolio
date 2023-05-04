@@ -135,7 +135,8 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 2rem 0; }
   #proyectos h2 {
     color: #F7FFF7; }
 
@@ -174,3 +175,17 @@ ul {
 
 .sitio:hover .imgHover {
   transform: scale(110%); }
+
+/*footer-------------------------------------------------------------*/
+#contacto {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #3F1D67;
+  padding: 2rem;
+  gap: 1rem; }
+  #contacto a {
+    transition: 0.5s; }
+  #contacto a:hover {
+    transform: scale(110%); }
