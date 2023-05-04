@@ -1,0 +1,11 @@
+$claro1:#F7FFF7;
+$claro2:#916bd1;
+$oscuro1:#4B2B75;
+$oscuros2:#3F1D67;
+
+@mixin d-flex-column($direc,$align,$justify){
+    display: flex;
+    flex-direction: $direc;
+    justify-content: $justify;
+    align-items: $align;
+}
