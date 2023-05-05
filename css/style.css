@@ -10,6 +10,9 @@ h2 {
 p {
   color: #F7FFF7; }
 
+.wordColor {
+  color: #916bd1; }
+
 /*header---------------------------------------------------------------------------*/
 body {
   position: relative;
@@ -63,6 +66,14 @@ header a {
 
 ul {
   list-style: none; }
+  ul li {
+    transition: 0.5s; }
+    ul li a {
+      transition: 0.5s; }
+      ul li a:hover {
+        color: #916bd1; }
+    ul li:hover {
+      transform: scale(110%); }
 
 @media screen and (max-width: 768px) {
   nav ul {
@@ -80,9 +91,26 @@ ul {
   nav .navbarToggler {
     display: block !important; } }
 
+@media screen and (min-width: 768px) {
+  .ul {
+    width: 100%; }
+    .ul ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+      width: 100%; } }
+
 /*body------------------------------------------------------------------*/
 /*hero------------------------------------------------------------------*/
 #hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #4B2B75;
   padding-top: 75px; }
 
@@ -105,11 +133,24 @@ ul {
       font-size: 1.5rem;
       font-weight: 500;
       color: #F7FFF7; }
-    .heroContent .heroLeft .wordColor {
-      color: #916bd1; }
-  .heroContent img {
+
+@media screen and (max-width: 768px) {
+  img {
     width: 95%;
-    max-width: 350px; }
+    max-width: 350px; } }
+
+@media screen and (min-width: 768px) {
+  #hero {
+    min-height: 90vh; }
+    #hero .heroContent {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center; }
+      #hero .heroContent img {
+        width: 50%; }
+      #hero .heroContent .heroLeft {
+        width: 50%; } }
 
 /*sobre mi------------------------------------------------------------------------*/
 .bg {
@@ -121,7 +162,8 @@ ul {
   #sobreMi h2 {
     color: #916bd1;
     padding-top: 2rem; }
-  #sobreMi .sobreMiLeft, #sobreMi .sobreMiRight {
+  #sobreMi .sobreMiLeft,
+  #sobreMi .sobreMiRight {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -140,9 +182,20 @@ ul {
   row-gap: 1.5rem; }
 
 @media screen and (min-width: 768px) {
+  #sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem; }
   .accordion-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .bg {
+    min-height: 90vh; } }
 
 /*proyectos--------------------------------------------------------------------*/
 #proyectos {
@@ -161,10 +214,11 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0; }
+  padding: 3rem 0;
+  gap: 1rem; }
   .proyecto .sitio {
     position: relative;
-    width: 95%;
+    width: fit-content;
     cursor: pointer;
     overflow: hidden;
     border-radius: 10px;
@@ -196,6 +250,21 @@ ul {
 .sitio:hover .imgHover {
   transform: scale(110%); }
 
+.orden {
+  display: flex;
+  flex-wrap: wrap-reverse; }
+
+@media screen and (min-width: 992px) {
+  .proyecto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    .proyecto p {
+      width: 90%; }
+  .proyecto:nth-child(even) {
+    flex-direction: row-reverse; } }
+
 /*footer-------------------------------------------------------------*/
 #contacto {
   display: flex;
@@ -203,7 +272,7 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: #3F1D67;
-  padding: 2rem;
+  height: 10vh;
   gap: 1rem; }
   #contacto a {
     transition: 0.5s; }

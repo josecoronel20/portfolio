@@ -15,6 +15,9 @@ p {
     color: $claro1;
 }
 
+.wordColor {
+    color: $claro2;
+}
 /*header---------------------------------------------------------------------------*/
 body {
     position: relative;
@@ -62,7 +65,7 @@ nav {
 }
 
 .navbarToggler:active {
-    transform:scale(85%);
+    transform: scale(85%);
 }
 
 h2 {
@@ -78,6 +81,20 @@ header {
 
 ul {
     list-style: none;
+
+    li {
+        transition: 0.5s;
+        a {
+            transition: 0.5s;
+            &:hover{
+                color: $claro2;
+            }
+        }
+        &:hover{
+            transform: scale(110%);
+        }
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -93,6 +110,7 @@ ul {
             z-index: -1;
             transition: .6s;
 
+
             li {
                 padding: 25px;
             }
@@ -104,10 +122,26 @@ ul {
     }
 }
 
+
+@media screen and (min-width: 768px) {
+    .ul {
+        width: 100%;
+
+        ul {
+            @include d-flex-column(row, center, flex-end);
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+    }
+}
+
 /*body------------------------------------------------------------------*/
 /*hero------------------------------------------------------------------*/
 
 #hero {
+    @include d-flex-column(column, center, center);
     background-color: $oscuro1;
     padding-top: 75px;
 }
@@ -116,6 +150,7 @@ ul {
     @include d-flex-column(column, center, center);
     gap: 2rem;
     padding: 1rem 0 2rem;
+
 
 
     .heroLeft {
@@ -130,14 +165,33 @@ ul {
             color: $claro1;
         }
 
-        .wordColor {
-            color: $claro2;
-        }
+        
     }
+}
 
+@media screen and (max-width: 768px) {
     img {
         width: 95%;
         max-width: 350px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    #hero {
+        min-height: 90vh;
+
+        .heroContent {
+            @include d-flex-column(row, center, center);
+
+            img {
+                width: 50%;
+            }
+
+            .heroLeft {
+                width: 50%;
+            }
+        }
     }
 }
 
@@ -153,17 +207,19 @@ ul {
         color: $claro2;
         padding-top: 2rem;
     }
+
     padding-top: 3rem;
 
-    .sobreMiLeft, .sobreMiRight {
+    .sobreMiLeft,
+    .sobreMiRight {
         @include d-flex-column (column, center, center);
     }
 
-    .sobreMiLeft{
+    .sobreMiLeft {
         padding-bottom: 2rem;
     }
 
-    .sobreMiRight{
+    .sobreMiRight {
         gap: 2rem;
     }
 }
@@ -178,11 +234,26 @@ ul {
 }
 
 @media screen and(min-width: 768px) {
-    .accordion-grid{
-        display: grid;
-        grid-template-columns: repeat(4,1fr);
 
+    #sobreMi {
+        @include d-flex-column(column, center, center)
     }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2rem;
+    }
+
+    .accordion-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .bg {
+        min-height: 90vh;
+    }
+
 }
 
 /*proyectos--------------------------------------------------------------------*/
@@ -201,11 +272,12 @@ ul {
 .proyecto {
     @include d-flex-column(column, center, center);
     padding: 3rem 0;
+    gap: 1rem;
 
 
     .sitio {
         position: relative;
-        width: 95%;
+        width: fit-content;
         cursor: pointer;
         overflow: hidden;
         border-radius: 10px;
@@ -246,11 +318,32 @@ ul {
     transform: scale(110%);
 }
 
+.orden {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+
+@media screen and (min-width: 992px) {
+    .proyecto {
+        @include d-flex-column (row, center, center);
+        
+        p {
+            width: 90%;
+        }
+    }
+    
+    .proyecto:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+
+}
+
 /*footer-------------------------------------------------------------*/
 #contacto {
     @include d-flex-column(row, center, center);
     background-color: $oscuros2;
-    padding: 2rem;
+    height: 10vh;
     gap: 1rem;
 
     a {
