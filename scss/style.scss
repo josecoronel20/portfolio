@@ -61,6 +61,10 @@ nav {
     transition: .4s;
 }
 
+.navbarToggler:active {
+    transform:scale(85%);
+}
+
 h2 {
     color: $claro2;
 }
@@ -76,7 +80,7 @@ ul {
     list-style: none;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
     nav {
         ul {
             display: grid;
@@ -89,7 +93,7 @@ ul {
             z-index: -1;
             transition: .6s;
 
-            li{
+            li {
                 padding: 25px;
             }
         }
@@ -133,29 +137,35 @@ ul {
 
     img {
         width: 95%;
+        max-width: 350px;
     }
 }
 
 /*sobre mi------------------------------------------------------------------------*/
-#sobreMi {
-    background-color: $oscuros2;
-    padding: 2rem 0;
 
+.bg {
+    background-color: $oscuro1;
+    padding: 2rem 0;
+}
+
+#sobreMi {
     h2 {
-        color: $claro1;
+        color: $claro2;
+        padding-top: 2rem;
+    }
+    padding-top: 3rem;
+
+    .sobreMiLeft, .sobreMiRight {
+        @include d-flex-column (column, center, center);
     }
 
-}
+    .sobreMiLeft{
+        padding-bottom: 2rem;
+    }
 
-.accordion-body {
-    background-color: $oscuro1;
-    color: $claro1;
-}
-
-.accordion-button,
-.collapsed {
-    background-color: $claro2 !important;
-    color: $oscuro1 !important;
+    .sobreMiRight{
+        gap: 2rem;
+    }
 }
 
 .accordion-grid {
@@ -163,21 +173,35 @@ ul {
     justify-content: center;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    row-gap: 1.5rem;
+}
+
+@media screen and(min-width: 768px) {
+    .accordion-grid{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+
+    }
 }
 
 /*proyectos--------------------------------------------------------------------*/
 #proyectos {
-    background-color: $oscuro1;
     @include d-flex-column(column, center, center);
-    padding: 2rem 0;
+    padding-top: 3rem;
 
     h2 {
-        color: $claro1;
+        color: $claro2;
+        padding: 3rem 0;
     }
+
+    gap:2rem;
 }
 
 .proyecto {
     @include d-flex-column(column, center, center);
+    padding: 3rem 0;
+
 
     .sitio {
         position: relative;
@@ -185,12 +209,15 @@ ul {
         cursor: pointer;
         overflow: hidden;
         border-radius: 10px;
-        
+        margin-bottom: 1rem;
+        max-width: 500px;
+
         .imgHover {
             width: 100%;
             transition: 0.5s;
+            object-fit: cover;
         }
-        
+
         .capa {
             @include d-flex-column(column, center, center);
             position: absolute;
@@ -201,7 +228,7 @@ ul {
             transition: 0.5s;
             transform: translateX(-100%);
 
-            
+
             p {
                 color: $claro1;
                 text-decoration: none;
@@ -210,28 +237,27 @@ ul {
     }
 
 }
-.sitio:hover .capa{
+
+.sitio:hover .capa {
     transform: translateX(0%);
 }
 
-.sitio:hover .imgHover{
+.sitio:hover .imgHover {
     transform: scale(110%);
 }
 
 /*footer-------------------------------------------------------------*/
-#contacto{
+#contacto {
     @include d-flex-column(row, center, center);
     background-color: $oscuros2;
     padding: 2rem;
     gap: 1rem;
 
-    a{
+    a {
         transition: 0.5s;
     }
 
-    a:hover{
+    a:hover {
         transform: scale(110%);
     }
 }
-
-

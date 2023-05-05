@@ -51,6 +51,9 @@ nav {
   border-radius: 10px;
   transition: .4s; }
 
+.navbarToggler:active {
+  transform: scale(85%); }
+
 h2 {
   color: #916bd1; }
 
@@ -61,7 +64,7 @@ header a {
 ul {
   list-style: none; }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 768px) {
   nav ul {
     display: grid;
     position: absolute;
@@ -105,55 +108,72 @@ ul {
     .heroContent .heroLeft .wordColor {
       color: #916bd1; }
   .heroContent img {
-    width: 95%; }
+    width: 95%;
+    max-width: 350px; }
 
 /*sobre mi------------------------------------------------------------------------*/
-#sobreMi {
-  background-color: #3F1D67;
-  padding: 2rem 0; }
-  #sobreMi h2 {
-    color: #F7FFF7; }
-
-.accordion-body {
+.bg {
   background-color: #4B2B75;
-  color: #F7FFF7; }
+  padding: 2rem 0; }
 
-.accordion-button,
-.collapsed {
-  background-color: #916bd1 !important;
-  color: #4B2B75 !important; }
+#sobreMi {
+  padding-top: 3rem; }
+  #sobreMi h2 {
+    color: #916bd1;
+    padding-top: 2rem; }
+  #sobreMi .sobreMiLeft, #sobreMi .sobreMiRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  #sobreMi .sobreMiLeft {
+    padding-bottom: 2rem; }
+  #sobreMi .sobreMiRight {
+    gap: 2rem; }
 
 .accordion-grid {
   display: grid;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(2, 1fr); }
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 1.5rem; }
+
+@media screen and (min-width: 768px) {
+  .accordion-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); } }
 
 /*proyectos--------------------------------------------------------------------*/
 #proyectos {
-  background-color: #4B2B75;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem 0; }
+  padding-top: 3rem;
+  gap: 2rem; }
   #proyectos h2 {
-    color: #F7FFF7; }
+    color: #916bd1;
+    padding: 3rem 0; }
 
 .proyecto {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 3rem 0; }
   .proyecto .sitio {
     position: relative;
     width: 95%;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 10px; }
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 500px; }
     .proyecto .sitio .imgHover {
       width: 100%;
-      transition: 0.5s; }
+      transition: 0.5s;
+      object-fit: cover; }
     .proyecto .sitio .capa {
       display: flex;
       flex-direction: column;
