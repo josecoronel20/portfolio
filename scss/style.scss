@@ -187,7 +187,7 @@ ul {
             @include d-flex-column(row, center, center);
 
             img {
-                width: 50%;
+                width: 45%;
             }
 
             .heroLeft {
@@ -205,7 +205,7 @@ ul {
 }
 
 #sobreMi {
-    h2 {
+    h2,h1 {
         color: $claro2;
         padding-top: 2rem;
     }
@@ -263,7 +263,7 @@ ul {
     @include d-flex-column(column, center, center);
     padding-top: 3rem;
 
-    h2 {
+    h1 {
         color: $claro2;
         padding: 3rem 0;
     }
@@ -345,7 +345,7 @@ ul {
 #contacto {
     @include d-flex-column(row, center, center);
     background-color: $oscuros2;
-    height: 10vh;
+    min-height: 10vh;
     gap: 1rem;
 
     a {

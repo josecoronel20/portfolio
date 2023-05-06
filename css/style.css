@@ -150,7 +150,7 @@ ul {
       justify-content: center;
       align-items: center; }
       #hero .heroContent img {
-        width: 50%; }
+        width: 45%; }
       #hero .heroContent .heroLeft {
         width: 50%; } }
 
@@ -161,7 +161,7 @@ ul {
 
 #sobreMi {
   padding-top: 3rem; }
-  #sobreMi h2 {
+  #sobreMi h2, #sobreMi h1 {
     color: #916bd1;
     padding-top: 2rem; }
   #sobreMi .sobreMiLeft,
@@ -207,7 +207,7 @@ ul {
   align-items: center;
   padding-top: 3rem;
   gap: 2rem; }
-  #proyectos h2 {
+  #proyectos h1 {
     color: #916bd1;
     padding: 3rem 0; }
 
@@ -274,7 +274,7 @@ ul {
   justify-content: center;
   align-items: center;
   background-color: #3F1D67;
-  height: 10vh;
+  min-height: 10vh;
   gap: 1rem; }
   #contacto a {
     transition: 0.5s; }
