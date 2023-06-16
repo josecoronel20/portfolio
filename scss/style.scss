@@ -45,14 +45,6 @@ nav {
     padding: 0 1rem;
 }
 
-.input-checkbox {
-    display: none;
-
-    &:checked~nav ul {
-        transform: translateY(0);
-    }
-}
-
 .navbarToggler {
     display: none;
     padding: 0 20px;
@@ -81,7 +73,7 @@ header {
 
 ul {
     list-style: none;
-    
+
 
     li {
         transition: 0.5s;
@@ -107,11 +99,12 @@ ul {
             width: 100%;
             top: 75px;
             left: 0;
-            transform: translateY(-100%);
+            transform: translateY(-120%);
             z-index: -1;
             transition: .6s;
             padding: 0;
             margin: 0;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
             li {
                 padding: 25px;
@@ -122,6 +115,10 @@ ul {
             display: block !important;
         }
     }
+}
+
+.transformY{
+    transform: translateY(0%)!important;
 }
 
 
@@ -146,6 +143,7 @@ ul {
     @include d-flex-column(column, center, center);
     background-color: $oscuro1;
     padding-top: 75px;
+    min-height: 90vh;
 }
 
 .heroContent {
@@ -285,6 +283,7 @@ ul {
         border-radius: 10px;
         margin-bottom: 1rem;
         max-width: 500px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         .imgHover {
             width: 100%;
@@ -323,6 +322,20 @@ ul {
 .orden {
     display: flex;
     flex-wrap: wrap-reverse;
+}
+
+.btnGithub{
+    background-color: $claro2;
+    color: $oscuro1;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &:hover{
+        transform: scale(110%);
+    }
 }
 
 
