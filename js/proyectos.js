@@ -33,4 +33,11 @@ let proyectos = [{
     img: "arenadosActualizacion.png",
     urlGithub:"https://github.com/josecoronel20/arenados-lucho"
 },
+{
+    proyectoNumero: 6,
+    texto: "Éste es mi <span class=\"wordColor\">sexto proyecto</span>, se trata de un clon de la página de inicio de facebook, el objetivo de este trabajo era empezar a probar e implementar <span class=\"wordColor\">Tailwind</span>.",
+    url: "https://josecoronel20.github.io/facebookClonTailwind/public/index.html",
+    img: "copiaFacebook.png",
+    urlGithub:"https://github.com/josecoronel20/facebookClonTailwind"
+},
 ]
