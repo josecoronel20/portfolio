@@ -13,7 +13,7 @@ function agregarProyectos() {
         card.innerHTML = `
         <div class>
         <div class="sitio">
-                            <a href="${proyecto.url}/" target="_blank">
+                            <a href="${proyecto.url}" target="_blank">
                                 <img src="../img/${proyecto.img}" class="imgHover" alt="screen página Portfolio">
                                 <div class="capa">
                                     <p>Ir al sitio</p>

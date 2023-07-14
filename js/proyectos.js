@@ -22,7 +22,7 @@ let proyectos = [{
 {
     proyectoNumero: 4,
     texto: "Éste es mi <span class=\"wordColor\">cuarto proyecto</span>, el proyecto final del curso de JavaScript de Coderhouse, pude implementar un carrusel interactivo en la sección de \"Productos Destacados\", permitiendo a los usuarios explorar diferentes productos. Además, logré incorporar un sistema de filtrado por categoría, brindando a los usuarios la opción de seleccionar una categoría y ver solo los productos relacionados. También agregué un carrito de compras funcional, donde los usuarios pueden agregar productos, ver un resumen de su selección y simular una compra. Estas funcionalidades demuestran mi habilidad para utilizar JavaScript en la manipulación del DOM y la creación de una experiencia interactiva en un sitio web. ",
-    url: "https://josecoronel20.github.io/eccomerce1/",
+    url: "https://josecoronel20.github.io/proyectoFinal-Coronel",
     img: "ecommerce1.png",
     urlGithub:"https://github.com/josecoronel20/proyectoFinal-Coronel"
 },
